@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomePage.master.cs" Inherits="MyFirstApplication.HomePage1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        #container {
+            width: 600px;
+            height: 500px;
+            margin:auto;
+        }
+
+        #logo {
+            width: 600px;
+            height: 100px;
+            background-color: blueviolet;
+            float: left;
+        }
+
+        #menu {
+            width: 600px;
+            height: 100px;
+            background-color: #404ddc;
+            float: left;
+        }
+
+        #ads{
+            width:200px;
+            height:300px;
+            background-color:#ff006e;
+            float:left;
+        }
+
+        #content{
+            width:400px;
+            height:300px;
+            background-color:darkseagreen;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="container">
+            <div id="logo">
+                <h1>My Logo</h1>
+            </div>
+            <div id="menu">
+            </div>
+            <div id="ads">
+            </div>
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+            
+        </div>
+    </form>
+</body>
+</html>
