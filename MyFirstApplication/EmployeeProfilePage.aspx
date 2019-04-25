@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HeaderControl.aspx.cs" Inherits="MyFirstApplication.HeaderControl" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EmployeeProfilePage.aspx.cs" Inherits="MyFirstApplication.EmployeeProfilePage" %>
 
 <!DOCTYPE html>
 
@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <h1>Employee Details</h1>
         </div>
     </form>
 </body>

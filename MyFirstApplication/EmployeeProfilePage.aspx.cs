@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace MyFirstApplication
 {
-    public partial class HeaderControl : System.Web.UI.Page
+    public partial class EmployeeProfilePage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
