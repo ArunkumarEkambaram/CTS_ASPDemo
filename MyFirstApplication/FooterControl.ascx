@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="FooterControl.ascx.cs" Inherits="MyFirstApplication.FooterControl" %>
-<<%@ OutputCache Duration="9999" VaryByParam="none" %>
+<%@ OutputCache Duration="9999" VaryByParam="none" %>
 <link href="Content/bootstrap.css" rel="stylesheet" />
 <div class="container">
     <div class="row h-25">

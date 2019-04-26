@@ -52,6 +52,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -108,9 +110,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\BlueTheme\StyleSheet1.css" />
+    <Content Include="AuthenticationEx.aspx" />
     <Content Include="Caching.aspx" />
     <Content Include="CachingExample.aspx" />
     <Content Include="ChildPage1.aspx" />
+    <None Include="Connected Services\ServiceReference1\MyService.disco" />
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -129,13 +139,17 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="FooterControl.ascx" />
+    <Content Include="GetPositionData.aspx" />
     <Content Include="HeaderControl.ascx" />
     <Content Include="Images\shopping.png" />
     <Content Include="MyControl.ascx" />
+    <Content Include="MyHomePage.aspx" />
     <Content Include="ShoppingExpress.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="App_Themes\BlueTheme\Skin1.skin" />
     <Content Include="WebForm4.aspx" />
+    <None Include="Connected Services\ServiceReference1\MyService.wsdl" />
+    <Content Include="ImageHandler1.ashx" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -153,6 +167,7 @@
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -202,6 +217,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="AuthenticationEx.aspx.cs">
+      <DependentUpon>AuthenticationEx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthenticationEx.aspx.designer.cs">
+      <DependentUpon>AuthenticationEx.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Caching.aspx.cs">
       <DependentUpon>Caching.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -222,6 +244,11 @@
     </Compile>
     <Compile Include="ChildPage1.aspx.designer.cs">
       <DependentUpon>ChildPage1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="DataCache.aspx.cs">
       <DependentUpon>DataCache.aspx</DependentUpon>
@@ -258,6 +285,13 @@
     <Compile Include="FooterControl.ascx.designer.cs">
       <DependentUpon>FooterControl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="GetPositionData.aspx.cs">
+      <DependentUpon>GetPositionData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetPositionData.aspx.designer.cs">
+      <DependentUpon>GetPositionData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -282,12 +316,22 @@
     <Compile Include="HomePage.Master.designer.cs">
       <DependentUpon>HomePage.Master</DependentUpon>
     </Compile>
+    <Compile Include="ImageHandler1.ashx.cs">
+      <DependentUpon>ImageHandler1.ashx</DependentUpon>
+    </Compile>
     <Compile Include="MyControl.ascx.cs">
       <DependentUpon>MyControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MyControl.ascx.designer.cs">
       <DependentUpon>MyControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MyHomePage.aspx.cs">
+      <DependentUpon>MyHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyHomePage.aspx.designer.cs">
+      <DependentUpon>MyHomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewEmployee.aspx.cs">
       <DependentUpon>NewEmployee.aspx</DependentUpon>
@@ -397,6 +441,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

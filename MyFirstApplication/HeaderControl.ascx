@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="HeaderControl.ascx.cs" Inherits="MyFirstApplication.HeaderControl" %>
-<<%@ OutputCache Duration="9999" VaryByParam="none" %>
+<%@ OutputCache Duration="9999" VaryByParam="none" %>
 <link href="Content/bootstrap.css" rel="stylesheet" />
 <div class="container container-fluid">
     <div class="row">

@@ -11,11 +11,11 @@
         <div>
             <h1>DataList Example</h1>
             <hr />
-            <div style="text-align:center">
+            <div style="text-align: center">
                 <asp:DataList ID="dlProducts" GridLines="Both" runat="server" RepeatColumns="4" RepeatDirection="Horizontal" OnItemCommand="dlProducts_ItemCommand">
                     <ItemTemplate>
                         <div>
-                            Image
+                            <asp:Image ID="imgProduct" Height="100" Width="100" ImageUrl='<%#"Handler1.ashx?Id="+Eval("Id") %>' runat="server" />
                         </div>
                         <div>
                             <asp:Label Text='<%#Eval("vFirstName") %>' ID="lblProductName" runat="server" />
